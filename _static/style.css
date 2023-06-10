@@ -1,0 +1,130 @@
+body {
+  background: #F5F5F0;
+  color: black;
+  font-family: Monaco;
+}
+
+.list-movies-title {
+  padding: 10px 0;
+  background: #009B50;
+  color: white;
+  text-align: center;
+  font-size: 16pt;
+}
+
+
+/* ======= Grid CSS ======= */
+
+.movie-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* ======= Movie item CSS ======= */
+
+.movie-grid li {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.movie {
+  width: 150px;
+}
+
+.movie-poster {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 150px;
+    height: 213px;
+}
+
+.movie-info {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 5px;
+  justify-content: space-between;
+}
+
+.movie-title,
+.movie-year {
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.movie-text {
+  width: 65%;
+  margin-top: 10px;
+}
+
+.movie-year {
+  color: #999;
+}
+
+.country {
+  width: 25%;
+  height: 2.5em;
+  right: 0;
+}
+
+
+/* ======= Hover tooltip CSS ======= */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  width: 130px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -65px;
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/* ======= Ribbon CSS ======= */
+
+.ribbon-wrapper {
+  width: 80px;
+  height: 80px;
+  top: 0px;
+  right: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ribbon {
+  font: bold 14px sans-serif;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 5px 0;
+  top: 13px;
+  right: -4px;
+  width: 100px;
+  background-color: #B90E0A;
+  color: #fff;
+}
