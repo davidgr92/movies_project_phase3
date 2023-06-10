@@ -6,13 +6,13 @@ from .istorage import IStorage
 class StorageJson(IStorage):
     """Json storage class, allows the movie app use json format storage"""
     def __init__(self, file_path):
-        self.file_path = file_path
+        self._file_path = file_path
         if not isfile(file_path):
             self.save_to_json({})
 
     def save_to_json(self, data):
         """Saves the provided data to the json data file"""
-        with open(self.file_path, 'w') as file:
+        with open(self._file_path, 'w') as file:
             file.write(json.dumps(data, indent=4))
 
     def list_movies(self):
@@ -34,7 +34,7 @@ class StorageJson(IStorage):
           },
         }
         """
-        with open(self.file_path, 'r') as file:
+        with open(self._file_path, 'r') as file:
             movie_data = json.loads(file.read())
 
         return movie_data

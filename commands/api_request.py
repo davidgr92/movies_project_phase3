@@ -7,8 +7,8 @@ class MovieAPIRequest:
     """Movie API request class, gets movie from the API request
     and handles any errors."""
     def __init__(self):
-        self.api_key = environ["API_KEY"]
-        self.api_ep = f'http://www.omdbapi.com/?apikey={self.api_key}&t='
+        self._api_key = '292ab885'
+        self._api_ep = f'http://www.omdbapi.com/?apikey={self._api_key}&t='
 
     def get_movie_data(self, title: str) -> dict:
         """Gets a movie title and tries to fetch movie data from api.
@@ -42,7 +42,7 @@ class MovieAPIRequest:
 
     def get_request_from_api(self, title: str):
         """Send a GET requests to API and returns response in json format"""
-        url = self.api_ep + title
+        url = self._api_ep + title
         response = requests.get(url, timeout=3)
         return response.json()
 

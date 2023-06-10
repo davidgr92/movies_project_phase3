@@ -1,0 +1,14 @@
+{
+    "the lion king": {
+        "title": "The Lion King",
+        "rating": 8.5,
+        "year": 1994,
+        "genre": "Animation, Adventure, Drama",
+        "img": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg",
+        "director": "Roger Allers, Rob Minkoff",
+        "country": "United States",
+        "alpha_2": "US",
+        "imdbID": "tt0110357",
+        "note": "Bla bla"
+    }
+}
