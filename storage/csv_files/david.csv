@@ -1,9 +1,2 @@
-year,note,country,title,img,alpha_2,rating,imdbID,genre,director
-2006,,"United Kingdom, United States",The Prestige,https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_SX300.jpg,GB,8.5,tt0482571,"Drama, Mystery, Sci-Fi",Christopher Nolan
-1994,,United States,Forrest Gump,https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,US,8.8,tt0109830,"Drama, Romance",Robert Zemeckis
-1980,,United States,Star Wars: Episode V - The Empire Strikes Back,https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,US,8.7,tt0080684,"Action, Adventure, Fantasy",Irvin Kershner
-2003,,"New Zealand, United States",The Lord of the Rings: The Return of the King,https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,NZ,9.0,tt0167260,"Action, Adventure, Drama",Peter Jackson
-1972,,United States,The Godfather,https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,US,9.2,tt0068646,"Crime, Drama",Francis Ford Coppola
-1994,great movie,United States,The Lion King,https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg,US,8.5,tt0110357,"Animation, Adventure, Drama","Roger Allers, Rob Minkoff"
-2009,,United States,Avatar,https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,US,7.9,tt0499549,"Action, Adventure, Fantasy",James Cameron
-2014,,United States,Whiplash,https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg,US,8.5,tt2582802,"Drama, Music",Damien Chazelle
+imdbID,title,alpha_2,img,genre,note,year,country,rating,director
+tt0110357,The Lion King,US,https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg,"Animation, Adventure, Drama",Bla bla,1994,United States,8.5,"Roger Allers, Rob Minkoff"

@@ -29,14 +29,14 @@ DATA2 = {"the lion king": {
 
 
 def test_storage_json_init():
-    path = os.path.join(ROOT_PATH, "storage", "json_files", "movies.json")
+    path = os.path.join(ROOT_PATH, "storage", "json_files", "test.json")
     storage = StorageJson(path)
     assert isinstance(storage, IStorage)
     assert isinstance(storage, StorageJson)
 
 
 def test_storage_json_list_movies():
-    path = os.path.join(ROOT_PATH, "storage", "json_files", "david.json")
+    path = os.path.join(ROOT_PATH, "storage", "json_files", "test.json")
     storage = StorageJson(path)
     storage.save_to_json(DATA)
     assert storage.list_movies() == DATA
@@ -44,14 +44,14 @@ def test_storage_json_list_movies():
 
 
 def test_storage_json_add_movie():
-    path = os.path.join(ROOT_PATH, "storage", "json_files", "david.json")
+    path = os.path.join(ROOT_PATH, "storage", "json_files", "test.json")
     storage = StorageJson(path)
     storage.add_movie(DATA2)
     assert len(storage.list_movies()) == 2
 
 
 def test_storage_json_del_movie():
-    path = os.path.join(ROOT_PATH, "storage", "json_files", "david.json")
+    path = os.path.join(ROOT_PATH, "storage", "json_files", "test.json")
     storage = StorageJson(path)
     movie_title = list(DATA.keys())[0]
     storage.delete_movie(movie_title)
@@ -60,7 +60,7 @@ def test_storage_json_del_movie():
 
 
 def test_storage_json_update_movie():
-    path = os.path.join(ROOT_PATH, "storage", "json_files", "david.json")
+    path = os.path.join(ROOT_PATH, "storage", "json_files", "test.json")
     storage = StorageJson(path)
     movie_title = list(DATA2.keys())[0]
     note = "Bla bla"
@@ -68,27 +68,54 @@ def test_storage_json_update_movie():
     assert storage.list_movies()[movie_title]["note"] == note
 
 
+# ==================== Testing CSV storage files ============================
 def test_storage_csv_init():
-    path = os.path.join(ROOT_PATH, "storage", "csv_files", "david.json")
+    path = os.path.join(ROOT_PATH, "storage", "csv_files", "david.csv")
     storage = StorageCsv(path)
     assert isinstance(storage, IStorage)
     assert isinstance(storage, StorageCsv)
 
 
+def test_storage_csv_list_empty():
+    path = os.path.join(ROOT_PATH, "storage", "csv_files", "test.csv")
+    storage = StorageCsv(path)
+    storage.list_movies()
+    assert isinstance(storage, IStorage)
+    assert isinstance(storage, StorageCsv)
+
+
+
 def test_storage_csv_list_movies():
-    pass
+    path = os.path.join(ROOT_PATH, "storage", "csv_files", "david.csv")
+    storage = StorageCsv(path)
+    storage.save_to_csv(DATA)
+    assert storage.list_movies() == DATA
+    assert len(storage.list_movies()) == 1
 
 
 def test_storage_csv_add_movie():
-    pass
+    path = os.path.join(ROOT_PATH, "storage", "csv_files", "david.csv")
+    storage = StorageCsv(path)
+    storage.add_movie(DATA2)
+    assert len(storage.list_movies()) == 2
 
 
 def test_storage_csv_del_movie():
-    pass
+    path = os.path.join(ROOT_PATH, "storage", "csv_files", "david.csv")
+    storage = StorageCsv(path)
+    movie_title = list(DATA.keys())[0]
+    storage.delete_movie(movie_title)
+    assert storage.list_movies() == DATA2
+    assert len(storage.list_movies()) == 1
 
 
 def test_storage_csv_update_movie():
-    pass
+    path = os.path.join(ROOT_PATH, "storage", "csv_files", "david.csv")
+    storage = StorageCsv(path)
+    movie_title = list(DATA2.keys())[0]
+    note = "Bla bla"
+    storage.update_movie(movie_title, note)
+    assert storage.list_movies()[movie_title]["note"] == note
 
 
 pytest.main()

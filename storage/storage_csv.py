@@ -1,5 +1,8 @@
 import pandas as pd
 from os.path import isfile
+
+import pandas.errors
+
 from .istorage import IStorage
 
 
@@ -40,8 +43,11 @@ class StorageCsv(IStorage):
           },
         }
         """
-        df = pd.read_csv(self._file_path)
         movies_data = {}
+        try:
+            df = pd.read_csv(self._file_path)
+        except pandas.errors.EmptyDataError:
+            return movies_data
 
         for i, row in df.iterrows():
             movie_dict = {}
