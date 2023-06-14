@@ -10,6 +10,7 @@ ROOT_PATH = Path(__file__).parent
 
 
 def get_storage_arg():
+    """Get storage args from terminal call"""
     default_path = os.path.join(ROOT_PATH, "storage", "json_files",
                                 "movies.json")
     if len(sys.argv) <= 1:
